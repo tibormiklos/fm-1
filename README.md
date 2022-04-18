@@ -45,8 +45,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/tibormiklos/fm-1/)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github repo link](https://github.com/tibormiklos/fm-1/)
+- Live Site URL: [Github pages link](https://tibormiklos.github.io/fm-1/)
 
 
 ### Built with
