@@ -80,7 +80,8 @@ body {
   margin-bottom: var(--spacer-m);
 }
 
-h1, p {
+h1,
+p {
   margin: 0;
 }
 
@@ -176,20 +177,24 @@ p#rating-tag {
     --spacer-s: 10px;
     --spacer-m: 20px;
   }
+
   .card {
     width: 280px;
     padding: 20px;
     border-radius: 20px;
   }
+
   #rating form label {
     width: 40px;
     height: 40px;
     padding: 12px;
   }
+
   button {
     height: 40px;
     border-radius: 20px;
   }
+
   .icon {
     padding: 13px 12px;
   }

@@ -3,4 +3,4 @@ function getRating() {
     document.getElementById("rating-tag").innerHTML = "You selected " + x + " out of 5";
     document.getElementById('rating').style.display = 'none'
     document.getElementById('thankyou').style.display = 'flex'
-  }
+}
