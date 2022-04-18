@@ -10,6 +10,10 @@
   color: hsl(25, 97%, 53%);
 }
 
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+
 :root {
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
@@ -18,33 +22,45 @@
   --medium-grey: hsl(216, 12%, 54%);
   --dark-blue: hsl(213, 19%, 18%);
   --v-dark-blue: hsl(216, 12%, 8%);
+  --spacer-s: 15px;
+  --spacer-m: 30px;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
 body {
-  background: var(--black);
   font-family: 'Overpass', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background-color: hsl(225, 13%, 6%);
   font-size: 15px;
+  font-weight: 400;
   color: var(--white);
 }
 
-h1,
-p {
-  margin-bottom: 15px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
-  margin: 0 auto;
-  width: 410px;
-  margin: 10% auto;
+  max-width: 410px;
   padding: 30px;
   background: var(--v-dark-blue);
   border-radius: 25px;
-  background-image: radial-gradient(farthest-side at 50% 0%, var(--dark-blue), var(--v-dark-blue));
-  vertical-align: middle;
+  background: radial-gradient(circle farthest-side at 50% 0%, var(--dark-blue), var(--v-dark-blue));
   display: flex;
   vertical-align: middle;
   flex-direction: column;
   transition: all 2s;
+  margin-bottom: var(--spacer-m);
 }
 
 #rating {
@@ -61,11 +77,21 @@ p {
   padding: 18px 17px;
   background: var(--dark-blue);
   border-radius: 50%;
+  margin-bottom: var(--spacer-m);
+}
+
+h1, p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
 }
 
 p {
   color: var(--medium-grey);
   line-height: 1.7em;
+  margin-bottom: var(--spacer-m);
 }
 
 #rating form {
@@ -76,7 +102,7 @@ p {
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  margin-bottom: var(--spacer-m);
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -89,8 +115,8 @@ p {
 }
 
 #rating form label {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   padding: 17px;
   background: var(--dark-blue);
@@ -134,9 +160,37 @@ button:hover {
   justify-content: space-evenly;
 }
 
+.illustration {
+  margin-bottom: var(--spacer-m);
+}
+
 p#rating-tag {
   background: var(--dark-blue);
   padding: 6px 18px;
   border-radius: 25px;
   color: var(--orange);
+}
+
+@media only screen and (max-width: 375px) {
+  :root {
+    --spacer-s: 10px;
+    --spacer-m: 20px;
+  }
+  .card {
+    width: 280px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  #rating form label {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+  }
+  button {
+    height: 40px;
+    border-radius: 20px;
+  }
+  .icon {
+    padding: 13px 12px;
+  }
 }
