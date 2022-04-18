@@ -1,18 +1,24 @@
-.attribution { font-size: 11px; text-align: center; color:rgb(255,255,255,.4); }
-.attribution a { color: hsl(25, 97%, 53%); }
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(216, 12%, 54%);
+}
+
+.attribution a {
+  color: hsl(25, 97%, 53%);
+}
 
 :root {
-    --orange: hsl(25, 97%, 53%);
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
-    --light-grey: hsl(217, 12%, 63%);
-    --medium-grey: hsl(216, 12%, 54%);
-    --dark-blue: hsl(213, 19%, 18%);
-    --v-dark-blue: hsl(216, 12%, 8%);
-    
-  }
-
-  @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --v-dark-blue: hsl(216, 12%, 8%);
+}
 
 body {
   background: var(--black);
@@ -21,99 +27,116 @@ body {
   color: var(--white);
 }
 
-h1, p {
-    margin:0;
+h1,
+p {
+  margin-bottom: 15px;
 }
-h1 {
-    margin-bottom:15px;
-}
+
 .card {
-    width:410px;
-    height: 410px;
-    margin:0 auto;
-    margin-top:10%;
-    padding:30px;
-    background: var(--v-dark-blue);
-    border-radius:25px;
-    background-image: radial-gradient(farthest-side at 50% 0%, var(--dark-blue), var(--v-dark-blue));
-    vertical-align: middle;
-    display: flex;
-    vertical-align: middle;
-    flex-direction: column;
+  margin: 0 auto;
+  width: 410px;
+  margin: 10% auto;
+  padding: 30px;
+  background: var(--v-dark-blue);
+  border-radius: 25px;
+  background-image: radial-gradient(farthest-side at 50% 0%, var(--dark-blue), var(--v-dark-blue));
+  vertical-align: middle;
+  display: flex;
+  vertical-align: middle;
+  flex-direction: column;
+  transition: all 2s;
 }
 
 #rating {
-    align-items:flex-start;
-    justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 #rating p {
-    padding-right:30px;
+  padding-right: 30px;
 }
+
 .icon {
-  display:inline-block;
-  padding:18px 17px;
-  background:var(--dark-blue);
-  border-radius:50%;
+  display: inline-block;
+  padding: 18px 17px;
+  background: var(--dark-blue);
+  border-radius: 50%;
 }
+
 p {
   color: var(--medium-grey);
-  line-height:1.7em;
+  line-height: 1.7em;
 }
-#rating ul {
-    width:100%;
-    margin:0;
-    padding:0;
-    list-style:none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+
+#rating form {
+  width: 100%;
 }
-#rating ul li {
-  width:20px;
-  height:20px;
-  text-align:center;
-  padding:17px;
+
+#rating form .numbers {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#rating form input {
+  display: none;
+}
+
+#rating form label {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding: 17px;
   background: var(--dark-blue);
-  border-radius:50%;
+  border-radius: 50%;
 }
-#rating ul li:hover {
-  cursor:pointer;
-  background:var(--medium-grey);
+
+#rating form label:hover {
+  cursor: pointer;
+  background: var(--medium-grey);
   color: var(--white);
 }
-#rating ul li:active {
-  cursor:pointer;
-  background:var(--orange);
+
+#rating form input:checked+label {
+  cursor: pointer;
+  background: var(--orange);
   color: var(--white);
 }
+
 button {
   background: var(--orange);
-  width:100%;
-  height:50px;
-  border-radius:25px;
-  border:none;
-  text-transform:uppercase;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
   letter-spacing: 3px;
   color: var(--white);
-  font-weight:500;
+  font-weight: 500;
 }
+
 button:hover {
-  cursor:pointer;
-  background:var(--white);
+  cursor: pointer;
+  background: var(--white);
   color: var(--orange);
 }
 
 #thankyou {
-    align-items: center;
-    text-align:center;
-    justify-content: space-evenly;
+  display: none;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
 }
 
-p.selection-tag {
-    background:var(--dark-blue);
-    padding:6px 18px;
-    border-radius:25px;
-    color: var(--orange);
+p#rating-tag {
+  background: var(--dark-blue);
+  padding: 6px 18px;
+  border-radius: 25px;
+  color: var(--orange);
 }
